@@ -1,10 +1,47 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import ListPokemon from './pages/ListPokemon'
+import PokemonDetails from './pages/PokemonDetails'
+import SearchPokemon from './pages/SearchPokemon'
+import RandomPokemon from './pages/RamdomPokemon'
+
+
+
+let router = createBrowserRouter(  [
+  {
+    path: "/",
+    Component: HomePage,
+  },
+  {
+    path: "/listePokemon",
+    Component: ListPokemon,
+  },
+
+  {
+    path: "/detailsPokemon/:id",
+    Component: PokemonDetails,
+  },
+
+  {
+    path: "/recherche/:name",
+    Component: SearchPokemon,
+  },
+
+  {
+    path: "/aleatoire",
+    Component: RandomPokemon,
+  },
+])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    
+    <RouterProvider router={router} />
+    
+    
+    
   </StrictMode>,
 )
