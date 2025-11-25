@@ -30,6 +30,7 @@ card: {
     maxWidth: "350px",
     marginTop: "5em",
     cursor: "pointer",
+    backgroundColor: "#ffffff", 
   },
 
   title: {

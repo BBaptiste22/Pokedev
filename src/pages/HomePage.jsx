@@ -23,7 +23,7 @@ function HomePage() {
     <Header />
     <div style={styles.grid}>
       {pokemons.map(pokemon => (
-        <div key={pokemon.id} style={card}>
+        <div key={pokemon.id} >
           <DisplayPokemon pokemon={pokemon} />
         </div>
       ))}

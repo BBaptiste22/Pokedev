@@ -7,6 +7,8 @@ import ListPokemon from './pages/ListPokemon'
 import PokemonDetails from './pages/PokemonDetails'
 import SearchPokemon from './pages/SearchPokemon'
 import RandomPokemon from './pages/RamdomPokemon'
+import FightPage from './pages/FightPage'
+import FightPokemonType from './pages/FightPokemonType'
 
 
 
@@ -33,6 +35,16 @@ let router = createBrowserRouter(  [
   {
     path: "/aleatoire",
     Component: RandomPokemon,
+  },
+
+  {
+    path: "/jouer",
+    Component: FightPage,
+  },
+
+  {
+    path: "/jouer/:type",
+    Component: FightPokemonType,
   },
 ])
 
